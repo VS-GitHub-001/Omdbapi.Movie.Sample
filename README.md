@@ -11,19 +11,15 @@
 
 
 
-![Alt Text](https://github.com/VS-GitHub-001/Omdbapi.Movie.Sample/blob/master/UI/RazorWebUI/wwwroot/3.png){:height="200px" width="300px"}
+![Alt Text](https://github.com/VS-GitHub-001/Omdbapi.Movie.Sample/blob/master/UI/RazorWebUI/wwwroot/3.png)
 
 
 
-![Alt Text](url){:height="200px" width="300px"}
+![Alt Text](https://github.com/VS-GitHub-001/Omdbapi.Movie.Sample/blob/master/UI/RazorWebUI/wwwroot/4.png)
 
 
-
-![Alt Text](url){:height="200px" width="300px"}
-
-
-![Alt Text](url){:height="200px" width="300px"}
+![Alt Text](https://github.com/VS-GitHub-001/Omdbapi.Movie.Sample/blob/master/UI/RazorWebUI/wwwroot/5.png)
 
 
+![Alt Text](https://github.com/VS-GitHub-001/Omdbapi.Movie.Sample/blob/master/UI/RazorWebUI/wwwroot/6.png)
 
-![Alt Text](url){:height="200px" width="300px"}
