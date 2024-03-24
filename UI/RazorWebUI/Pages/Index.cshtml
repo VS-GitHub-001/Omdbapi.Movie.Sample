@@ -1,0 +1,86 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">
+            MOVIE SEARCH FROM OMDB API
+        </h3>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div class="input-group">
+                <input asp-for="Title" class="form-control" placeholder="Enter movie title...">
+                <div class="input-group-prepend">
+                    <button type="submit" class="btn btn-primary">
+                       Search
+                    </button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <div class="card-body">
+
+
+        @if (Model.Movies == null)
+        {
+            <h3>Search for Any Movie...</h3>
+            @if (Model.StatusMessage != null)
+            {
+                <div class="alert alert-warning" role="alert">
+                    @Model.StatusMessage <!-- Your warning message here -->
+                </div>
+            }
+        }
+        else
+        {
+            var movieCount = Model.Movies.Count();
+    <h3 class="mb-5">Search Result (@movieCount Movies)</h3>
+
+
+
+            if (movieCount > 0)
+            {
+
+                <div class="row mt-3">
+                    @foreach (var item in Model.Movies)
+                    {
+                        <div class="col-md-3 mb-2">
+                            <a asp-page="./Details" asp-route-id="@item.ImdbId" style="text-decoration:none;">
+                                <div class="card">
+                                        <img class="img-thumbnail" src="@item.PosterUrl" style="max-height:400px;"/>
+                                      
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-3" style="font-weight:800;text-align:center;height:60px;">
+                                            @item.Title
+                                        </h5>
+                                        <p>
+                                            <ul>
+                                                <li><strong>Type: </strong>@item.Type</li>
+                                                <li><strong>Year</strong>@item.Year</li>
+
+                                            </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+                </div>
+
+
+
+            }
+
+
+        }
+
+    </div>
+</div>
+
+
+

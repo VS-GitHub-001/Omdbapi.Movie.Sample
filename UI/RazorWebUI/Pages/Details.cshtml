@@ -1,0 +1,57 @@
+﻿@page
+@model RazorWebUI.Pages.DetailsModel
+@{
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">
+            @Model.MovieDetailsDto.Title
+        </h3>
+    </div>
+
+    <div class="card-body">
+        <a asp-page="./Details" asp-route-id="@Model.MovieDetailsDto.ImdbId" style="text-decoration:none;">
+            <div class="card">
+                <img class="img-thumbnail" src="@Model.MovieDetailsDto.Poster" alt="@Model.MovieDetailsDto.Title" style="max-width:400px;" />
+                <div class="card-body">
+                  
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Year:</strong> @Model.MovieDetailsDto.Year</li>
+                        <li class="list-group-item"><strong>Rated:</strong> @Model.MovieDetailsDto.Rated</li>
+                        <li class="list-group-item"><strong>Released:</strong> @Model.MovieDetailsDto.Released</li>
+                        <li class="list-group-item"><strong>Runtime:</strong> @Model.MovieDetailsDto.Runtime</li>
+                        <li class="list-group-item"><strong>Genre:</strong> @Model.MovieDetailsDto.Genre</li>
+                        <li class="list-group-item"><strong>Director:</strong> @Model.MovieDetailsDto.Director</li>
+                        <li class="list-group-item"><strong>Writer:</strong> @Model.MovieDetailsDto.Writer</li>
+                        <li class="list-group-item"><strong>Actors:</strong> @Model.MovieDetailsDto.Actors</li>
+                        <li class="list-group-item"><strong>Plot:</strong> @Model.MovieDetailsDto.Plot</li>
+                        <li class="list-group-item"><strong>Language:</strong> @Model.MovieDetailsDto.Language</li>
+                        <li class="list-group-item"><strong>Country:</strong> @Model.MovieDetailsDto.Country</li>
+                        <li class="list-group-item"><strong>Awards:</strong> @Model.MovieDetailsDto.Awards</li>
+                        <li class="list-group-item"><strong>Metascore:</strong> @Model.MovieDetailsDto.Metascore</li>
+                        <!-- Movie ratings -->
+                        <li class="list-group-item"><strong>Ratings:</strong></li>
+                        <li class="list-group-item">
+                            <ul>
+                                @foreach (var rating in Model.MovieDetailsDto.Ratings)
+                                {
+                                    <li>@rating.Source: @rating.Value</li>
+                                }
+                            </ul>
+                        </li>
+                        <li class="list-group-item"><strong>IMDB Votes:</strong> @Model.MovieDetailsDto.ImdbVotes</li>
+                        <li class="list-group-item"><strong>Type:</strong> @Model.MovieDetailsDto.Type</li>
+                        <li class="list-group-item"><strong>DVD:</strong> @Model.MovieDetailsDto.DVD</li>
+                        <li class="list-group-item"><strong>Box Office:</strong> @Model.MovieDetailsDto.BoxOffice</li>
+                        <li class="list-group-item"><strong>Production:</strong> @Model.MovieDetailsDto.Production</li>
+                        <li class="list-group-item"><strong>Website:</strong> @Model.MovieDetailsDto.Website</li>
+                    </ul>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</div>
+
+

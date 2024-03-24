@@ -1,0 +1,49 @@
+﻿@page
+@model RazorWebUI.Pages.MoviesModel
+@{
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">
+           FIVE LATEST MOVIES IN EACH SEARCH GROUPED BY DATE
+        </h3>
+    </div>
+    
+    <div class="card-body">
+        @foreach (var group in Model.MoviesGroupedByDate)
+        {
+            <h3 class="mb-5">@group.Key.ToString("ddd dd MMM, yyyy HH:mm:ss") (@group.Value.Count() Movies)</h3>
+            <div class="row mt-3">
+                @foreach (var item in group.Value)
+                {
+                    <div class="col-md-3 mb-2">
+                        <a asp-page="./Details" asp-route-id="@item.ImdbId" style="text-decoration:none;">
+                            <div class="card">
+                                <img class="img-thumbnail" src="@item.PosterUrl" style="max-height:400px;" />
+
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3" style="font-weight:800;text-align:center;height:60px;">
+                                        @item.Title
+                                    </h5>
+                                    <p>
+                                        <ul>
+                                            <li><strong>Type: </strong>@item.Type</li>
+                                            <li><strong>Year</strong>@item.Year</li>
+
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+            <hr style="border:3px solid blue;"/>
+        }
+       
+
+    </div>
+</div>
+
+
