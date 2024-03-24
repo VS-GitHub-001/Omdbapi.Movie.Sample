@@ -24,7 +24,7 @@ To get started with the project, follow these steps:
 
 Clone the repository from GitHub:
 
-git clone [https://github.com/your-username/your-project.git](https://github.com/VS-GitHub-001/Omdbapi.Movie.Sample)
+git clone https://github.com/VS-GitHub-001/Omdbapi.Movie.Sample
 
 Ensure you have .NET 8 installed. You can download it from Microsoft's official website.
 
