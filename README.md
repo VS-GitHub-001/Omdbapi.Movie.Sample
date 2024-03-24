@@ -1,16 +1,16 @@
 
-Movie Search Web Application
+**Movie Search Web Application**
 
 This project is a web application that utilizes the OMDb API service to provide various movie-related functionalities. It allows users to search for movies by title, view search results, save the 5 latest search queries, and display extended information about a selected movie, including its poster, description, and IMDB score.
 
-Technologies Used
+**Technologies Used**
 Backend Framework: .NET Core
 Frontend Framework: Razor
 Database: MSSQL
 API Integration: OMDb API (http://www.omdbapi.com)
 Unit Testing: Included, using standard .NET Core testing libraries
 
-Table of Contents
+**Table of Contents**
 Installation
 Usage
 Features
@@ -18,13 +18,13 @@ API Documentation
 
 
 
-Installation
+**Installation**
 
 To get started with the project, follow these steps:
 
 Clone the repository from GitHub:
 
-git clone https://github.com/your-username/your-project.git
+git clone [https://github.com/your-username/your-project.git](https://github.com/VS-GitHub-001/Omdbapi.Movie.Sample)
 
 Ensure you have .NET 8 installed. You can download it from Microsoft's official website.
 
@@ -32,13 +32,13 @@ Install Visual Studio 2022 or any other IDE of your choice for development.
 
 
 
-Usage
+**Usage**
 
 This project requires .NET 8. Ensure you have it installed on your system. You can download it from here.
 
 
 
-Features
+**Features**
 
 FluentValidation: Used for elegant and fluent validation of requests, ensuring data integrity and accuracy.
 
@@ -51,7 +51,7 @@ MSSQL: Utilizes Microsoft SQL Server as the relational database management syste
 Moq: Integrates Moq, a popular mocking library for .NET, to facilitate unit testing by creating mock objects and defining their behavior.
 
 
-API Documentation
+**API Documentation**
 
 
 Movie Endpoints
@@ -80,7 +80,7 @@ Description: Get a movie by its title.
 GET /api/OmdbQuery/getmoviebyid/{id}
 Description: Get a movie by its ID.
 
-
+**Image Outcomes**
 
 ![Alt Text](https://github.com/VS-GitHub-001/Omdbapi.Movie.Sample/blob/master/UI/RazorWebUI/wwwroot/1.png)
 
